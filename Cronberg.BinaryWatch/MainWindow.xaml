@@ -6,14 +6,24 @@
         xmlns:local="clr-namespace:Cronberg.BinaryWatch"
         mc:Ignorable="d"
         ResizeMode="NoResize"
-        Title="Cronbergs BinaryWatch" Height="130" Width="800">
-
-    <Grid>
-        <StackPanel VerticalAlignment="Center">
-            <TextBlock x:Name="txt" Grid.Column="0" Text="00000000:00000000:00000000" 
+        Title="Cronbergs BinaryWatch" Height="130" Width="800" KeyDown="Window_KeyDown">
+    <DockPanel>
+        <Menu x:Name="myMenu" DockPanel.Dock="Top" Visibility="Collapsed">
+            <MenuItem Header="_Options">
+                <MenuItem Header="_Show seconds" IsCheckable="True" IsChecked="False" Click="menuShowSeconds" />
+                <MenuItem Header="_Show as hex" IsCheckable="True" IsChecked="False" Click="menuShowHex" />
+                <Separator />
+                <MenuItem Header="_Exit" Click="menuExit" />
+            </MenuItem>
+        </Menu>
+        <Grid>
+            <StackPanel VerticalAlignment="Center">
+                <TextBlock x:Name="txt" Grid.Column="0" Text="00000000:00000000:00000000" 
            VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="52"/>
-        </StackPanel>
-    </Grid>
+            </StackPanel>
+        </Grid>
+    </DockPanel>
+  
 
         
 </Window>
