@@ -22,6 +22,7 @@ namespace Cronberg.BinaryWatch
             this.WindowStartupLocation = WindowStartupLocation.CenterOwner;
             this.WindowState = WindowState.Normal;
             this.Title = "Cronbergs BinaryWatch";
+            
             ShowValue();
 
             System.Windows.Threading.DispatcherTimer dispatcherTimer = new System.Windows.Threading.DispatcherTimer();
@@ -80,6 +81,7 @@ namespace Cronberg.BinaryWatch
                     this.Width = 200;
                 }
             }
+            this.Topmost = option.TopMost;            
         }
         private void Window_KeyDown(object sender, KeyEventArgs e)
         {
@@ -107,11 +109,19 @@ namespace Cronberg.BinaryWatch
             ShowValue();
         }
 
+        private void menuTopMost(object sender, RoutedEventArgs e)
+        {
+            option.TopMost = !option.TopMost;
+            myMenu.Visibility = Visibility.Collapsed;
+            ShowValue();
+        }
+
     }
 
     class Options
     {
         public bool ShowSeconds { get; set; }
         public bool ShowHex { get; set; }
+        public bool TopMost { get; set; } = true;
     }
 }

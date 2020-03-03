@@ -11,7 +11,8 @@
         <Menu x:Name="myMenu" DockPanel.Dock="Top" Visibility="Collapsed">
             <MenuItem Header="_Options">
                 <MenuItem Header="_Show seconds" IsCheckable="True" IsChecked="False" Click="menuShowSeconds" />
-                <MenuItem Header="_Show as hex" IsCheckable="True" IsChecked="False" Click="menuShowHex" />
+                <MenuItem Header="Show as _hex" IsCheckable="True" IsChecked="False" Click="menuShowHex" />
+                <MenuItem Header="Stay on _top" IsCheckable="True" IsChecked="True" Click="menuTopMost" />
                 <Separator />
                 <MenuItem Header="_Exit" Click="menuExit" />
             </MenuItem>
