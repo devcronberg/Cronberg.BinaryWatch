@@ -10,9 +10,13 @@
     <DockPanel>
         <Menu x:Name="myMenu" DockPanel.Dock="Top" Visibility="Collapsed">
             <MenuItem Header="_Options">
+                <MenuItem Header="_Watch" IsCheckable="False" Click="menuWatch" />
+                <MenuItem Header="_Count down" IsCheckable="False" Click="menuCountDown" />
                 <MenuItem Header="_Show seconds" IsCheckable="True" IsChecked="False" Click="menuShowSeconds" />
                 <MenuItem Header="Show as _hex" IsCheckable="True" IsChecked="False" Click="menuShowHex" />
                 <MenuItem Header="Stay on _top" IsCheckable="True" IsChecked="True" Click="menuTopMost" />
+                <MenuItem Header="Show title" IsCheckable="True" IsChecked="True" Click="menuShowTitle" />
+                
                 <Separator />
                 <MenuItem Header="_Exit" Click="menuExit" />
             </MenuItem>
